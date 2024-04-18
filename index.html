@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lesson 6</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="exercise">
+			<h2 class="exercise__title">Задание 1</h2>
+			<p class="exercise__subtitle">
+				Создайте функцию которая возводит переданное число в куб, необходимо
+				вывести в консоль результат 2^3 степени + 3 ^ 3 степени
+			</p>
+			<div class="solution">
+				<p class="solution__text">Введите число</p>
+				<input
+					type="text"
+					class="exercise__input"
+					placeholder="2"
+					data-cube="input"
+				/>
+				<button class="btn" onclick="getCube()">Запуск</button>
+				<p class="solution__answer" data-cube="answer"></p>
+			</div>
+		</div>
+		<div class="exercise">
+			<h2 class="exercise__title">Задание 2</h2>
+			<p class="exercise__subtitle">
+				Пользователь вводит с клавиатуры число, если ввёл текст, необходимо
+				вывести что значение задано неверно Создать фукнцию, которая высчитывает
+				13% от данного числа и выводит в консоль текст "Размер заработной платы
+				за вычетом налогов равен значение"
+			</p>
+			<div class="solution">
+				<p class="solution__text">Введите число</p>
+				<input
+					type="text"
+					class="exercise__input"
+					placeholder="10000"
+					data-salary="input"
+				/>
+				<button class="btn" onclick="getSalary()">Запуск</button>
+				<p class="solution__answer" data-salary="answer"></p>
+			</div>
+		</div>
+		<div class="exercise">
+			<h2 class="exercise__title">Задание 3</h2>
+			<p class="exercise__subtitle">
+				Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию,
+				которая определяет максимальное значение среди этих чисел
+			</p>
+			<div class="solution">
+				<p class="solution__text">Введите число</p>
+				<input
+					type="text"
+					class="exercise__input"
+					placeholder="2"
+					data-max="input1"
+				/>
+				<input
+					type="text"
+					class="exercise__input"
+					placeholder="4"
+					data-max="input2"
+				/>
+				<input
+					type="text"
+					class="exercise__input"
+					placeholder="10"
+					data-max="input3"
+				/>
+				<button class="btn" onclick="getMax()">Запуск</button>
+				<p class="solution__answer" data-max="answer"></p>
+			</div>
+		</div>
+		<div class="exercise">
+			<h2 class="exercise__title">Задание 4</h2>
+			<p class="exercise__subtitle">
+				Необходимо реализовать четыре функции, каждая функция должна принимать
+				по два числа и выполнять одну из операций (каждая функция выполняет одну
+				из них): <br />
+				1. Сложение <br />
+				2. Разность <br />
+				3. Умножение <br />
+				4. Деление<br />
+				Необходимо сделать так, чтобы функция вернула число, например выражение
+				console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция
+				сложения в данном примере, ваши названия функций могут отличаться).
+				Округлять значения, которые возвращают функции не нужно, однако,
+				обратите внимание на разность, функция должна вычесть из большего числа
+				меньшее, либо вернуть 0, если числа равны. Функциям всегда передаются
+				корректные числа, проверки на NaN, Infinity делать не нужно.
+			</p>
+			<div class="solution solution-calc">
+				<p class="solution__text">Введите число</p>
+				<input
+					type="text"
+					class="exercise__input"
+					placeholder="2"
+					data-calc="input1"
+				/>
+				<input
+					type="text"
+					class="exercise__input"
+					placeholder="4"
+					data-calc="input2"
+				/>
+				<br />
+				<button class="btn" onclick="addition(getNumber1(), getNumber2())">
+					Сложение
+				</button>
+				<button class="btn" onclick="difference(getNumber1(), getNumber2())">Разность</button>
+				<button class="btn" onclick="multiplication(getNumber1(), getNumber2())">Умножение</button>
+				<button class="btn" onclick="division(getNumber1(), getNumber2())">Деление</button>
+				<p class="solution__answer" data-calc="answer"></p>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
